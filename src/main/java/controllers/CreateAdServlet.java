@@ -1,9 +1,9 @@
 package controllers;
 
 
-import com.codeup.adlister.dao.DaoFactory;
-import com.codeup.adlister.models.Ad;
-import com.codeup.adlister.models.User;
+import dao.DaoFactory;
+import models.Ad;
+import models.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,7 +16,7 @@ import java.io.IOException;
 public class CreateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if(request.getSession().getAttribute("user") != null) {
-            request.getRequestDispatcher("/WEB-INF/ads/create.jsp")
+            request.getRequestDispatcher("create.jsp")
                     .forward(request, response);
         } else {
             response.sendRedirect("/login");

@@ -1,6 +1,7 @@
 package dao;
 
-import com.codeup.adlister.models.Ad;
+
+import models.Ad;
 
 import java.util.List;
 

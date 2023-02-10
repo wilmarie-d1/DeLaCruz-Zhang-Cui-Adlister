@@ -1,7 +1,6 @@
 package dao;
 
-import com.codeup.adlister.models.User;
-
+import models.User;
 import java.util.List;
 
 public interface Users {
