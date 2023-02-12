@@ -2,22 +2,24 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%@include file="stylesheet.html" %>
     <jsp:include page="head.jsp">
-        <jsp:param name="title" value="Viewing All The Ads" />
-    </jsp:include>
+        <jsp:param name="title" value="Welcome to Ad-lister!" /></jsp:include>
 </head>
 <body>
-<jsp:include page="navbar.jsp" />
 
-<div class="container">
-    <h1>Here Are all the ads!</h1>
-
-    <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
-            <h2><c:out value="${ad.title}"/></h2>
-            <p><c:out value="${ad.description}"/></p>
+<div class="bg">
+    <div class="container col">
+        <p class="tagline">Ad-lister!</p>
+        <div class="container">
+            <form action="/login">
+                <button type="submit" name="login" id="login" class="btn btn-block landing-btn">Login</button>
+            </form>
+            <form action="/register">
+                <button type="submit" name="register" id="register" class="btn btn-block landing-btn">Register</button>
+            </form>
         </div>
-    </c:forEach>
+    </div>
 </div>
 
 </body>

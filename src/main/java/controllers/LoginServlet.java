@@ -1,9 +1,8 @@
 package controllers;
 
-
 import dao.DaoFactory;
 import models.User;
-import org.mindrot.jbcrypt.BCrypt;
+import util.Password;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,14 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "controllers.LoginServlet", urlPatterns = "/login")
+@WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") != null) {
             response.sendRedirect("/profile");
             return;
         }
-        request.getRequestDispatcher("login.jsp").forward(request, response);
+
+        request.getRequestDispatcher("/login.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -32,10 +32,11 @@ public class LoginServlet extends HttpServlet {
             return;
         }
 
-        boolean validAttempt = BCrypt.checkpw(password, user.getPassword());
+        boolean validAttempt = Password.check(password, user.getPassword());
 
         if (validAttempt) {
             request.getSession().setAttribute("user", user);
+            request.getSession().setAttribute("id",user.getId());
             response.sendRedirect("/profile");
         } else {
             response.sendRedirect("/login");

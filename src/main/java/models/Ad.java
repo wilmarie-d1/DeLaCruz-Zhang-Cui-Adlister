@@ -1,10 +1,29 @@
 package models;
 
+import java.util.List;
+
 public class Ad {
     private long id;
     private long userId;
     private String title;
     private String description;
+    private List<Long> categoryIds;
+
+
+
+    public Ad() {
+    }
+
+    public List<Long> getCategoryIds() {
+        return categoryIds;
+    }
+
+    public Ad(long userId, String title, String description, List<Long> categoryIds) {
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.categoryIds = categoryIds;
+    }
 
     public Ad(long id, long userId, String title, String description) {
         this.id = id;
@@ -17,6 +36,10 @@ public class Ad {
         this.userId = userId;
         this.title = title;
         this.description = description;
+    }
+
+    public void setCategoryIds(List<Long> categoryIds) {
+        this.categoryIds = categoryIds;
     }
 
     public long getId() {
