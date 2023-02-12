@@ -1,46 +1,43 @@
 package models;
+import java.sql.Timestamp;
 
-import java.util.List;
+
+
 
 public class Ad {
     private long id;
     private long userId;
     private String title;
     private String description;
-    private List<Long> categoryIds;
+    private Timestamp date_created;
+    private String category;
 
 
-
-    public Ad() {
-    }
-
-    public List<Long> getCategoryIds() {
-        return categoryIds;
-    }
-
-    public Ad(long userId, String title, String description, List<Long> categoryIds) {
-        this.userId = userId;
-        this.title = title;
-        this.description = description;
-        this.categoryIds = categoryIds;
-    }
-
-    public Ad(long id, long userId, String title, String description) {
+    public Ad(long id, long userId, String title, String description, Timestamp date_created) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
+        this.date_created = date_created;
     }
 
     public Ad(long userId, String title, String description) {
         this.userId = userId;
         this.title = title;
         this.description = description;
+        Timestamp newDate = new java.sql.Timestamp(System.currentTimeMillis());
+        this.date_created = newDate;
     }
 
-    public void setCategoryIds(List<Long> categoryIds) {
-        this.categoryIds = categoryIds;
+    public Ad(long userId, String title, String description, Timestamp date_created, String name) {
+
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.date_created = date_created;
+        this.category = name;
     }
+
 
     public long getId() {
         return id;
@@ -52,6 +49,12 @@ public class Ad {
 
     public long getUserId() {
         return userId;
+    }
+
+    public Timestamp getDate(){return date_created;}
+
+    public void setDate(Timestamp date_created) {
+        this.date_created = date_created;
     }
 
     public void setUserId(long userId) {
@@ -72,5 +75,21 @@ public class Ad {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Timestamp getDate_created() {
+        return date_created;
+    }
+
+    public void setDate_created(Timestamp date_created) {
+        this.date_created = date_created;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

@@ -9,10 +9,19 @@ public interface Ads {
     List<Ad> all();
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
-    void edit(Ad ad);
-    Ad searchByTitle(String title);
-    void delete(long id);
-    Ad getAdById(long id);
-    List<Ad> getByUserId(long id);
-    List<Ad> searchByUserInput(String input);
+
+    Ad attainAdId(long id);
+
+    void delete(String id);
+    void edit(String title, String description, Long adId);
+    List<Ad> sortAds();
+    List<Ad> sortAds(long id);
+    List<Ad> sortAdsAscending();
+    List<Ad> sortAdsAscending(long id);
+
+    List<Ad> allUserAds(long currentUserId);
+    Ad getAdDetails(long id);
+
+    //added to search
+    List<Ad> search(String searchAd);
 }
