@@ -8,6 +8,11 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<style>
+    body {
+        background-color: lightblue;
+    }
+</style>
 <div class="container">
     <h1>Welcome Ad-lister!</h1>
 </div>

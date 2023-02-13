@@ -11,6 +11,11 @@
     <title>Title</title>
 </head>
 <body>
+<style>
+    body {
+        background-color: lightblue;
+    }
+</style>
 <form method="post">
     <label for="date">Sort by:</label>
     <select name="date" id="date">
