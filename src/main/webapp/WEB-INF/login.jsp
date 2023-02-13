@@ -10,8 +10,14 @@
     </jsp:include>
 </head>
 <body>
+<style>
+    body {
+        background-color: lightblue;
+    }
+</style>
+
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-<div class="container">
+<div class="container" >
     <h1>Please Log In</h1>
     <c:if test="${invalidAttempt == false}">
         <p>Login Invalid! Please try again!</p>
