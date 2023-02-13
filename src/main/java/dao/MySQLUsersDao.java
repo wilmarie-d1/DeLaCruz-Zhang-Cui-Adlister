@@ -69,6 +69,8 @@ public class MySQLUsersDao implements Users {
 
     @Override
     public Long insert(User user) {
+        System.out.println("RUNNING INSERT METHOD");
+        System.out.println(user);
         String query = "INSERT INTO users(username, email, password, zip_code, phone_number) VALUES (?, ?, ?, ?, ?)";
         try {
             PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);

@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "controllers.RegisterServlet", urlPatterns = "/register")
+@WebServlet(name = "RegisterServlet", urlPatterns = "/register")
 public class RegisterServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -48,7 +48,7 @@ public class RegisterServlet extends HttpServlet {
         }
 
 
-        if (inputHasErrors || password.length() <= 7) {
+        if (inputHasErrors || password.length() < 7) {
             response.sendRedirect("/register");
             return;
         }
