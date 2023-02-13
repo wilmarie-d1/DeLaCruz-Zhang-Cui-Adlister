@@ -9,7 +9,9 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
-    <h1>Welcome Ad-lister!</h1>
+    <h1 id="pic">Welcome Ad-lister!</h1>
+    <img src="./img/ad.png" alt="h">
 </div>
+
 </body>
 </html>
