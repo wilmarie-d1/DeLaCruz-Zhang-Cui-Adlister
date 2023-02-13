@@ -15,6 +15,7 @@
 </style>
 <div class="container">
     <h1>Welcome Ad-lister!</h1>
+    <img src="billboards-adc.jpeg" alt="Your ads here PLEASE!" height="500" width="1000">
 </div>
 </body>
 </html>
