@@ -4,7 +4,7 @@
 
 <c:choose>
     <c:when test="${user.username == null}">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar bg-dark" data-bs-theme="dark">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">

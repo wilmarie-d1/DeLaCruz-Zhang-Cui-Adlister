@@ -6,6 +6,9 @@
         <jsp:param name="title" value="Welcome to my site!" />
     </jsp:include>
     <link href="WEB-INF/css/main.css" rel="stylesheet" type="text/css">
+    <style>
+
+    </style>
 </head>
 <body>
 <div class="bg-image">
