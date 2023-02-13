@@ -47,7 +47,7 @@ public class EditAdServlet extends HttpServlet {
 
         DaoFactory.getAdsDao().edit(title, description, adId); // edit the ad using the edit() which uses an UPDATE query to return the rows affected
 
-        response.sendRedirect("/DeLaCruz_Zhang_Cui_Adlister_war_exploded/profile");
+        response.sendRedirect("/profile");
 
 
 

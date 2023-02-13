@@ -13,11 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(name = "controllers.LoginServlet", urlPatterns = "/DeLaCruz_Zhang_Cui_Adlister_war_exploded/login")
+@WebServlet(name = "controllers.LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") != null) {
-            response.sendRedirect("/DeLaCruz_Zhang_Cui_Adlister_war_exploded/profile");
+            response.sendRedirect("/profile");
             return;
         }
 
@@ -42,10 +42,10 @@ public class LoginServlet extends HttpServlet {
         boolean validAttempt = Password.check(user.getPassword(), Password.hash(password));
         if (validAttempt) {
             request.getSession().setAttribute("user", user);
-            response.sendRedirect("/DeLaCruz_Zhang_Cui_Adlister_war_exploded/ads");
+            response.sendRedirect("/ads");
         } else {
 
-            response.sendRedirect("/DeLaCruz_Zhang_Cui_Adlister_war_exploded/login");
+            response.sendRedirect("/login");
 
         }
     }

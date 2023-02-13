@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "controllers.ViewProfileServlet", urlPatterns = "/DeLaCruz_Zhang_Cui_Adlister_war_exploded/profile")
+@WebServlet(name = "ViewProfileServlet", urlPatterns = "/profile")
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") == null) {
-            response.sendRedirect("/DeLaCruz_Zhang_Cui_Adlister_war_exploded/login");
+            response.sendRedirect("/login");
             return;
         }
 

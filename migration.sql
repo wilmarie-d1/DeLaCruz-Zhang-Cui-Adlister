@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS users;
 CREATE TABLE users (
 
                        id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-                       username VARCHAR(240) NOT NULL,
+                       username VARCHAR(240) NOT NULL unique,
                        first_name VARCHAR(60),
                        last_name VARCHAR(60),
                        email VARCHAR(240) NOT NULL,
