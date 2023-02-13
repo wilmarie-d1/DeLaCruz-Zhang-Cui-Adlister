@@ -4,7 +4,6 @@
 <html>
 <head>
     <jsp:include page="partials/head.jsp">
-        <style><%@include file="css/main.css"%></style>
         <jsp:param name="title" value="Register For Our Site!" />
     </jsp:include>
 </head>
