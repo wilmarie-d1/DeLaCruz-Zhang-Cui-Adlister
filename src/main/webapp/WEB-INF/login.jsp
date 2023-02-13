@@ -2,7 +2,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+
     <jsp:include page="/WEB-INF/partials/head.jsp">
+        <style><%@include file="css/main.css"%></style>
+
         <jsp:param name="title" value="Please Log In" />
     </jsp:include>
 </head>
