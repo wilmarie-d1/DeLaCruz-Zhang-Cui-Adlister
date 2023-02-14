@@ -8,6 +8,11 @@
   </jsp:include>
 </head>
 <body>
+<style>
+  body {
+    background-color: lightblue;
+  }
+</style>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
   <h1>Welcome, ${user.username}! Edit your ad below: </h1>
