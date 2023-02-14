@@ -9,8 +9,8 @@
 </head>
 <body>
 <style>
-    .bg-image {
-        background-image: url("https://resizer.iproimg.com/unsafe/880x/filters:format(webp)/https://assets.iprofesional.com/assets/jpg/2021/02/512363.jpg");
+    body {
+        background-image: url("https://images4.alphacoders.com/876/876272.jpg");
         min-height: 100%;
         min-width: 1024px;
         background-repeat: no-repeat;
@@ -23,9 +23,16 @@
         position: fixed;
     }
     .container {
-        border: 5px solid black;
+        border: 5px black;
         position: center;
         margin-top: 200px;
+        background-color: lightpink;
+        font-weight: bold;
+        width: 680px;
+        height: 620px;
+        opacity: .9;
+        border-radius: 40px;
+        box-shadow: 10px 10px 8px lavenderblush;
 
     }
 

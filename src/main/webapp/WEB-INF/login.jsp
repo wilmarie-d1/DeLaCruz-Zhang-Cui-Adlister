@@ -6,8 +6,8 @@
         <jsp:param name="title" value="Please Log In" />
     </jsp:include>
     <style>
-        .bg-image {
-            background-image: url("https://viajes.nationalgeographic.com.es/medio/2014/10/17/awl_fvg005505_1000x666.jpg");
+        body {
+            background-image: url("https://www.pixel4k.com/wp-content/uploads/2020/11/spring-waterfall-stone-fog-mist-green-forest-4k_1606595561-2048x871.jpg.webp");
             min-height: 100%;
             min-width: 1024px;
             background-repeat: no-repeat;
@@ -20,9 +20,15 @@
             position: fixed;
         }
         .container {
-            border: 5px solid black;
+            border: 3px dot-dash black ;
             position: center;
             margin-top: 200px;
+            background-color: darkolivegreen ;
+            width: 680px;
+            height: 350px;
+            opacity: .9;
+            border-radius: 40px;
+            box-shadow: 10px 10px 8px lightgray;
 
         }
     </style>
@@ -48,7 +54,12 @@
             <label for="password">Password</label>
             <input id="password" name="password" class="form-control" type="password">
         </div>
-        <input type="submit" class="btn btn-primary btn-block" value="Log In">
+        <label>
+            <input type="checkbox" style="position: center" checked="checked" name="remember"> Remember me
+        </label>
+        <input type="submit" class="btn btn-dark btn-block"  value="Log In">
+
+
     </form>
 </div>
 </div>
