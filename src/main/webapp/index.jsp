@@ -2,19 +2,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Welcome to my site!" />
+        <jsp:param name="title" value="Welcome to my site!"/>
     </jsp:include>
+
+
 </head>
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <body>
-<jsp:include page="/WEB-INF/partials/navbar.jsp" />
-<style>
-    body {
-        background-color: lightblue;
-    }
-</style>
 <div class="container">
-    <h1>Welcome Ad-lister!</h1>
+    <h1>Welcome to The Garden of Eden!</h1>
+    <div>
+        <img src="https://pixabay.com/images/id-1072828/" alt="pic" style="width: 100px">
+    </div>
 </div>
 </body>
 </html>

@@ -9,7 +9,6 @@
 <body>
 <style>
     body {
-        background-color: lightblue;
     }
 </style>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />

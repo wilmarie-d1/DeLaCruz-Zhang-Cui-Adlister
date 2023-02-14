@@ -9,10 +9,29 @@
 </head>
 <body>
 <style>
-    body {
-        background-color: lightblue;
+    .bg-image {
+        background-image: url("https://resizer.iproimg.com/unsafe/880x/filters:format(webp)/https://assets.iprofesional.com/assets/jpg/2021/02/512363.jpg");
+        min-height: 100%;
+        min-width: 1024px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+
+        /* Set up positioning */
+        position: fixed;
     }
+    .container {
+        border: 5px solid black;
+        position: center;
+        margin-top: 200px;
+
+    }
+
 </style><jsp:include page="partials/navbar.jsp" />
+<div class="bg-image">
+
 <div class="container">
     <h1>Please fill in your information.</h1>
     <form action="/register" method="post">
@@ -46,6 +65,7 @@
 
         <input type="submit" class="btn btn-primary btn-block">
     </form>
+</div>
 </div>
 </body>
 </html>

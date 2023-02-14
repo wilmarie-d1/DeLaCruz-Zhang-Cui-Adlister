@@ -4,19 +4,20 @@
 
 <c:choose>
     <c:when test="${user.username == null}">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
+        <nav class="navbar" style="background-color: green" >
+            <div class="container-fluid ">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/ads">Adlister</a>
+                    <a class="navbar-brand" href="/ads">Garden of Eden</a>
                 </div>
 
 
                 <form class="navbar-form navbar-right" action="/search">
                     <div class="form-group">
-                        <input type="text" name="search"  placeholder="Search all ads">
+                        <input type="text" name="search" placeholder="Search all ads">
                     </div>
-                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span>
+                    </button>
                 </form>
                     <%--  SEARCH --%>
 
@@ -25,8 +26,7 @@
                     <li><a href="/register">Register</a></li>
                 </ul>
             </div>
-            </div>
-
+<%--            </div>--%>
 
 
         </nav>
@@ -46,14 +46,15 @@
                     <li>
                         <form class="navbar-form navbar-right" action="/search">
                             <div class="form-group">
-                                <input type="text" name="search"  placeholder="Search all ads">
+                                <input type="text" name="search" placeholder="Search all ads">
                             </div>
-                            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                            <button type="submit" class="btn btn-default"><span
+                                    class="glyphicon glyphicon-search"></span></button>
                         </form>
                     </li>
                 </ul>
             </div>
-            </div>
+<%--            </div>--%>
         </nav>
     </c:otherwise>
 </c:choose>
