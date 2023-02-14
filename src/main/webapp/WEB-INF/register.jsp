@@ -25,7 +25,7 @@
     .container {
         border: 5px black;
         position: center;
-        margin-top: 200px;
+        margin-top: 150px;
         background-color: lightpink;
         font-weight: bold;
         width: 680px;

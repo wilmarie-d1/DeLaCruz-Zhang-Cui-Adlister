@@ -13,7 +13,14 @@
 <body>
 <style>
     body {
-        background-color: lightblue;
+        background-image: url("https://wallpaperset.com/w/full/5/9/7/237896.jpg");
+        min-height: 100%;
+        min-width: 1024px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
     }
 </style>
 <form method="post">

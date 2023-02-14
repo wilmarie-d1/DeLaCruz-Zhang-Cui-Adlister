@@ -19,18 +19,6 @@
        position: center;
    }
 
-    body:hover {
-          box-shadow: 0 0 0 5px inset, 0 0 5px grey, 0 0 10px grey inset;
-            transition: box-shadow 1s;
-    }
-    body:hover::after {
-        opacity: 0;
-        transition: opacity .5s;
-    }
-    body::after {
-        content: 'The Garden of Eden';
-    }
-
 
     h1 {
         margin-top: 250px;

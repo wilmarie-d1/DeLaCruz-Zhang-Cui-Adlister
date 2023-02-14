@@ -2,9 +2,24 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <% request.getSession().getAttribute("user");%>
 
+
+<style>
+
+    div>a {
+        font-size: 30px;
+        color: yellow;
+        font-family: Gambetta;
+    }
+    .nav {
+    font-size: 18px;
+        color: yellow;
+        font-family: Gambetta;
+
+    }
+</style>
 <c:choose>
     <c:when test="${user.username == null}">
-        <nav class="navbar" style="background-color: green" >
+        <nav class="navbar">
             <div class="container-fluid ">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -22,8 +37,8 @@
                     <%--  SEARCH --%>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login" class="nav">Login</a></li>
+                    <li><a href="/register" class="nav">Register</a></li>
                 </ul>
             </div>
 <%--            </div>--%>
@@ -37,12 +52,12 @@
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/ads">Adlister</a>
+                    <a class="navbar-brand" href="/ads">Garden of Eden</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/ads/create">Create Ad</a></li>
-                    <li><a href="/profile">Profile</a></li>
-                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/ads/create" class="nav">Create Ad</a></li>
+                    <li><a href="/profile" class="nav">Profile</a></li>
+                    <li><a href="/logout" class="nav">Logout</a></li>
                     <li>
                         <form class="navbar-form navbar-right" action="/search">
                             <div class="form-group">
