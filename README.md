@@ -1,10 +1,10 @@
 # DeLaCruz-Zhang-Cui-Adlister
-<h1>Garden of Eden</h1>
-The Garden of Eden is a web application that allows individuals to post different places where they have visited, want to visit or are looking for suggestions to visit. The applications connect audiences looking for travel places throughout the internet. User's that create accounts have full CRUD capability and interactively with our database.
+<h1>Genesis</h1>
+Genesis is a web application that allows individuals to post different places where they have visited, want to visit or are looking for suggestions to visit. The applications connect audiences looking for travel places throughout the internet. User's that create accounts have full CRUD capability and interactively with our database.
 
 Technologies
 Front End
-Adlister is styled using Bootstrap 5 designs patterns four major components.
+Genesis is styled using Bootstrap 5 designs patterns four major components.
 
 Back End
 The foundations of the back end utilizes Java library such as Servlets and JSP's. The application data is handled using a RDBMS(MYSQL)
