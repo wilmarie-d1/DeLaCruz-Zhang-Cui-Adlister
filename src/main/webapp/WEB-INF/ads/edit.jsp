@@ -39,16 +39,17 @@
   </style>
 </head>
 <body>
-<<<<<<< .merge_file_783bO8
+
 <style>
   body {
     background-color: lightblue;
   }
 </style>
-=======
+
 <div class="bg-img">
 
->>>>>>> .merge_file_aGuEQ3
+<div class="bg-img">
+
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
   <h1>Howdy, ${user.username}! </h1>

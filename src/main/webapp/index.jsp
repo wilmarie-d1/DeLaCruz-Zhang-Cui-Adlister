@@ -45,16 +45,21 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
 <div class="container">
-<<<<<<< .merge_file_jB39eA
+ zhang
+ .merge_file_jB39eA
     <h1>Welcome Ad-lister!</h1>
     <img src="billboards-adc.jpeg" alt="Your ads here PLEASE!" height="500" width="1000">
-=======
+
+ main
 
     <h1>Welcome to The Genesis!</h1>
 
     <div>
     </div>
->>>>>>> .merge_file_mbdmRU
+zhang
+.merge_file_mbdmRU
+
+ main
 </div>
 </body>
 </html>
