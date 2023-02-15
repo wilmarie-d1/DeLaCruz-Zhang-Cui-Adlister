@@ -22,7 +22,10 @@
       box-shadow: 10px 10px 8px lavenderblush;
       opacity: .9;
       border-radius: 20px;
-
+      margin: 5px;
+    }
+    .col-md-6:hover {
+      transform: translateY(-40px);
 
     }
 

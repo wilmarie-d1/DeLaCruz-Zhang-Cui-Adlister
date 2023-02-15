@@ -22,6 +22,7 @@
         width: 100%;
         height: auto;
     }
+
 </style>
 <form method="post">
     <label for="date">Sort by:</label>

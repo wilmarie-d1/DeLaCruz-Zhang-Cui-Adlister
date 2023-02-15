@@ -3,7 +3,7 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Please Log In" />
+        <jsp:param name="title" value="Log In" />
     </jsp:include>
     <style>
         body {
@@ -24,12 +24,17 @@
             position: center;
             margin-top: 200px;
             background-color: darkolivegreen ;
-            width: 680px;
+            width: 650px;
             height: 350px;
             opacity: .9;
-            border-radius: 40px;
             box-shadow: 10px 10px 8px lightgray;
+            font-family: 'Noto Sans Old South Arabian';
+            color: darkgoldenrod;
+            font-size: 20px;
 
+        }
+        .container:hover {
+            transform: translateY(-40px);
         }
     </style>
 </head>
@@ -39,7 +44,7 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="bg-image">
 <div class="container">
-    <h1>Please Log In</h1>
+    <h1 style="margin-left: 260px">Sign In</h1>
     <c:if test="${invalidAttempt == false}">
         <p>Login Invalid! Please try again!</p>
     </c:if>
@@ -47,12 +52,12 @@
     <form action="/login" method="POST">
 
         <div class="form-group">
-            <label for="username">Username</label>
-            <input id="username" name="username" class="form-control" type="text" value="<c:out value="${newName}"/>">
+            <label for="username">Username:</label>
+            <input id="username" name="username" class="form-control" style="font-size: 20px" type="text" value="<c:out value="${newName}"/>">
         </div>
         <div class="form-group">
-            <label for="password">Password</label>
-            <input id="password" name="password" class="form-control" type="password">
+            <label for="password">Password:</label>
+            <input id="password" name="password"  style="font-size: 20px" class="form-control" type="password">
         </div>
         <label>
             <input type="checkbox" style="position: center" checked="checked" name="remember"> Remember me
