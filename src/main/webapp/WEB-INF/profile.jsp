@@ -5,13 +5,43 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Your Profile" />
     </jsp:include>
+    <style>
+        .col-md-6 {
+            color: ghostwhite;
+            background: lightblue;
+            box-shadow: 10px 10px 8px lavenderblush;
+            opacity: .9;
+            border-radius: 20px;
+            margin: 5px;
+            width: 340px;
+        }
+        h1 {
+            color: white;
+        }
+        .edit-user {
+            border: white solid;
+            background-color: lightpink;
+            margin: 5px;
+            width: 400px;
+            height: 270px;
+            float: left;
+            border-radius: 20px;
+            color: midnightblue;
+            list-style: none;
+
+        }
+        .col-md-6:hover {
+            transform: translateY(-40px);
+        }
+        .edit-user>ul>li {
+            list-style: none;
+        }
+        .edit-user:hover {
+            transform: translateY(-40px);
+        }
+    </style>
 </head>
 <body>
-<style>
-    body {
-        background-color: lightblue;
-    }
-</style>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
@@ -23,7 +53,7 @@
         <jsp:include page="/WEB-INF/partials/filter.jsp" />
     </div>
 
-    <h1>Here are all of YOUR ads!</h1>
+    <h1>Here are all of your nature post</h1>
 
 
     <c:forEach var="ad" items="${ads}">
@@ -38,25 +68,27 @@
             </form>
             <form method="GET" action="/editAd?adId=${ad.id}" >
                 <input type="hidden" value="${ad.id}" name="adId" id="ad-id">
-                <button class="btn btn-success" type="submit">Edit this ad</button>
+                <button class="btn btn-success" type="submit">Edit</button>
             </form>
         </div>
     </c:forEach>
 
-    <div>
-        <h2>Edit your profile</h2>
+    <div class="edit-user " style="margin-left: 160px">
+        <h2 style="margin-left: 80px">Edit your profile</h2>
         <form action="/profile" method="post">
-            <label for="newUsername">New Username: </label>
+            <ul>
+            <li><label for="newUsername">New Username: </label></li>
             <input name="newUsername" id="newUsername" value="${user.username}">
-            <label for="newPassword">New Password: </label>
+           <li> <label for="newPassword">New Password: </label></li>
             <input name="newPassword" id="newPassword" value="${user.password}">
             <input name="userId" id="userId" value="${user.id}" type="hidden">
-            <input type="submit" value="Submit" name="userEdit">
+            <li><input type="submit" value="Submit" name="userEdit"></li>
+            </ul>
         </form>
     </div>
 
 
-</div>
+    </div>
 
 </body>
 </html>

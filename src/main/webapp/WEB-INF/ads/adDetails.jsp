@@ -11,14 +11,11 @@
   <jsp:include page="/WEB-INF/partials/head.jsp">
     <jsp:param name="title" value="Ad Details" />
   </jsp:include>
+
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-<style>
-  body {
-    background-color: lightblue;
-  }
-</style>
+
 <div class="container">
   <h1>${myAd.title}</h1>
   <h3>${myAd.description}</h3>
