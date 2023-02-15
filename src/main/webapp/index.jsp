@@ -46,7 +46,7 @@
 
 <div class="container">
 
-    <h1>Welcome to The Garden of Eden!</h1>
+    <h1>Welcome to The Genesis!</h1>
 
     <div>
     </div>

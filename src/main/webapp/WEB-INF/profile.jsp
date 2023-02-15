@@ -36,12 +36,15 @@
         .edit-user>ul>li {
             list-style: none;
         }
+        .edit-user:hover {
+            transform: translateY(-40px);
+        }
     </style>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-<form class="container">
+<div class="container">
     <h1>Welcome, ${user.username}!</h1>
 
 
@@ -70,24 +73,22 @@
         </div>
     </c:forEach>
 
-    <div class="edit-user d-flex col-md-6">
-        <h2>Edit your profile</h2>
-    </div>
-        <div action="/profile" method="post">
-             <label for="newUsername">New Username: </label>
+    <div class="edit-user " style="margin-left: 160px">
+        <h2 style="margin-left: 80px">Edit your profile</h2>
+        <form action="/profile" method="post">
+            <ul>
+            <li><label for="newUsername">New Username: </label></li>
             <input name="newUsername" id="newUsername" value="${user.username}">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            </button>
-            <label for="newPassword">New Password: </label>
-                <input name="newPassword" id="newPassword" value="${user.password}">
+           <li> <label for="newPassword">New Password: </label></li>
+            <input name="newPassword" id="newPassword" value="${user.password}">
             <input name="userId" id="userId" value="${user.id}" type="hidden">
-
-                <div class="modal-footer">
-                <input type="submit" value="Submit" name="userEdit">
-
-                </div>
-                </div>
+            <li><input type="submit" value="Submit" name="userEdit"></li>
+            </ul>
         </form>
+    </div>
+
+
+    </div>
 
 </body>
 </html>
