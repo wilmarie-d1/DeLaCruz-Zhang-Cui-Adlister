@@ -39,6 +39,15 @@
   </style>
 </head>
 <body>
+
+<style>
+  body {
+    background-color: lightblue;
+  }
+</style>
+
+<div class="bg-img">
+
 <div class="bg-img">
 
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
