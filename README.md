@@ -4,7 +4,7 @@ Genesis is a web application that allows individuals to post different places wh
 
 Technologies
 Front End
-Genesis is styled using Bootstrap 5 designs patterns four major components.
+Genesis is built and styled with Java, MySQL, HTML, and Bootstrap.
 
 Back End
 The foundations of the back end utilizes Java library such as Servlets and JSP's. The application data is handled using a RDBMS(MYSQL)
