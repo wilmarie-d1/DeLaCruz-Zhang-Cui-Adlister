@@ -6,11 +6,24 @@
   <jsp:include page="/WEB-INF/partials/head.jsp">
     <jsp:param name="title" value="Edit an ad" />
   </jsp:include>
+  <style>
+  .container {
+    color: ghostwhite;
+    background: lightblue;
+    box-shadow: 10px 10px 8px lavenderblush;
+    opacity: .9;
+    border-radius: 20px;
+    margin: 5px;
+  }
+  .container:hover {
+    transform: translateY(-40px);
+  }
+  </style>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
-  <h1>Welcome, ${user.username}! Edit your ad below: </h1>
+  <h1>Welcome, ${user.username}! Edit your post below: </h1>
   <form method="POST" action="/editAd">
     <div>
       <label  for="newTitle">Title</label>
