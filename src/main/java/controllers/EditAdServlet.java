@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.sql.Timestamp;
 
 
-@WebServlet("/DeLaCruz_Zhang_Cui_Adlister_war_exploded/editAd")
+@WebServlet("/editAd")
 public class EditAdServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
